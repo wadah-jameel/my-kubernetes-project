@@ -77,7 +77,7 @@ touch README.md docs/getting-started.md docs/deployment-guide.md
 touch k8s-manifests/namespace.yaml k8s-manifests/deployment.yaml
 ```
 
-🛠️ Prerequisites
+## 🛠️ Prerequisites
 
     Kubernetes cluster (v1.25+)
     kubectl configured
