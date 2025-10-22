@@ -265,7 +265,7 @@ spec:
   selector:
     app: api-app
 ```
-3. Verify Cluster Access
+## 3. Verify Cluster Access
 ```bash
 # Check cluster connection
 kubectl cluster-info
