@@ -37,9 +37,9 @@ kubectl apply -f k8s-manifests/
 kubectl get pods -n my-app
 
 
-Step 1: Project Structure Setup
+## Step 1: Project Structure Setup
 
-1.1 Create Repository Structure
+### 1.1 Create Repository Structure
 ```bash
 my-kubernetes-project/
 ├── README.md
@@ -63,7 +63,7 @@ my-kubernetes-project/
         └── deploy.yml
 ```
 
-1.2 Initialize Your Repository
+### 1.2 Initialize Your Repository
 ```bash
 # Create new repository on GitHub first, then:
 git clone https://github.com/yourusername/my-kubernetes-project.git
@@ -84,9 +84,9 @@ touch k8s-manifests/namespace.yaml k8s-manifests/deployment.yaml
     Docker (for building custom images)
 
 
-## Step 3: Create Kubernetes Manifests
+## Step 2: Create Kubernetes Manifests
 
-### 3.1 Namespace Configuration (k8s-manifests/namespace.yaml)
+### 2.1 Namespace Configuration (k8s-manifests/namespace.yaml)
 ```bash
 ```yaml
 # namespace.yaml
@@ -99,7 +99,7 @@ metadata:
     environment: development
 ```
 
-3.2 ConfigMap (k8s-manifests/configmap.yaml)
+### 2.2 ConfigMap (k8s-manifests/configmap.yaml)
 ```bash
 # configmap.yaml
 apiVersion: v1
@@ -121,7 +121,7 @@ data:
   NGINX_PORT: "80"
 ```
 
-3.3 Deployment (k8s-manifests/deployment.yaml)
+### 2.3 Deployment (k8s-manifests/deployment.yaml)
 ```bash
 # deployment.yaml
 apiVersion: apps/v1
@@ -228,7 +228,7 @@ spec:
             cpu: "200m"
 ```
 
-3.4 Service (k8s-manifests/service.yaml)
+### 2.4 Service (k8s-manifests/service.yaml)
 ```bash
 # service.yaml
 apiVersion: v1
@@ -274,15 +274,15 @@ kubectl cluster-info
 kubectl get nodes
 ```
 
-Quick Deployment
+# Quick Deployment
 
-Step 1: Clone Repository
+## Step 1: Clone Repository
 ```bash
 git clone https://github.com/yourusername/my-kubernetes-project.git
 cd my-kubernetes-project
 ```
 
-Step 2: Deploy Application
+## Step 2: Deploy Application
 ```bash
 # Apply all manifests
 kubectl apply -f k8s-manifests/
@@ -292,7 +292,7 @@ chmod +x scripts/deploy.sh
 ./scripts/deploy.sh
 ```
 
-Step 3: Verify Deployment
+## Step 3: Verify Deployment
 ```bash
 # Check namespace
 kubectl get namespaces
@@ -304,7 +304,7 @@ kubectl get pods -n my-app
 kubectl get services -n my-app
 ```
 
-Step 4: Access Application
+## Step 4: Access Application
 ```bash
 # Get service URL (for LoadBalancer)
 kubectl get service web-service -n my-app
