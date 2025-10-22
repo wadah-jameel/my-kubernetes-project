@@ -35,7 +35,7 @@ kubectl apply -f k8s-manifests/
 
 # Check deployment status
 kubectl get pods -n my-app
-
+```
 
 ## Step 1: Project Structure Setup
 
